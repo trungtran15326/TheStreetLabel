@@ -4,11 +4,15 @@
  */
 package TheStreetLablel.swing;
 
+
+import TheStreetLablel.event.EventMenuSelected;
+import TheStreetLablel.model.Model_Menu1;
 import java.awt.Color;
 import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import javax.swing.JFrame;
 
 /**
  *
@@ -16,30 +20,54 @@ import java.awt.RenderingHints;
  */
 public class Menu extends javax.swing.JPanel {
 
-    /**
-     * Creates new form Menu
-     */
+
+     private EventMenuSelected event;
+     
+    public void addEventSelected(EventMenuSelected event) {
+        this.event = event;
+        listMenu1.addEventSelected(event);
+    }
+
+
+    
+
     public Menu() {
         initComponents();
         setOpaque(false);
+        listMenu1.setOpaque(false);
+        init();
+
     }
+    
+    public void init(){
+        listMenu1.addItem(new Model_Menu1("Home", Model_Menu1.MenuType.MENU));
+        listMenu1.addItem(new Model_Menu1("Quản sản phẩm", Model_Menu1.MenuType.MENU));
+        listMenu1.addItem(new Model_Menu1("Quản lý đơn hàng", Model_Menu1.MenuType.MENU));
+        listMenu1.addItem(new Model_Menu1("Quản lý khách hàng", Model_Menu1.MenuType.MENU));
+        listMenu1.addItem(new Model_Menu1("Quản lý nhân viên", Model_Menu1.MenuType.MENU));
+        listMenu1.addItem(new Model_Menu1("Quản lý tài khoản", Model_Menu1.MenuType.MENU));
+        listMenu1.addItem(new Model_Menu1("Thống kê", Model_Menu1.MenuType.MENU));
+
+
         
+    }
+
+
     @Override
     protected void paintComponent(Graphics g) {
-        Graphics2D g2 = (Graphics2D)g;
+        Graphics2D g2 = (Graphics2D) g;
         g2.setBackground(getBackground());
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-GradientPaint gd = new GradientPaint(0, 0, Color.decode("#ABDCFF"), 0, getWidth(), Color.decode("#0396FF"));
+        GradientPaint gd = new GradientPaint(0, 0, Color.decode("#ABDCFF"), 0, getWidth(), Color.decode("#0396FF"));
 
         g2.setPaint(gd);
         g2.fillRoundRect(0, 0, getWidth(), getHeight(), 0, 0);
-        super.paintComponent(g); 
+        super.paintComponent(g);
     }
-    
-    
-    
-    
-    
+
+    public void initMoving(JFrame fram) {
+
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -50,19 +78,32 @@ GradientPaint gd = new GradientPaint(0, 0, Color.decode("#ABDCFF"), 0, getWidth(
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        listMenu1 = new TheStreetLablel.swing.ListMenu<>();
+
+        setPreferredSize(new java.awt.Dimension(200, 650));
+
+        listMenu1.setPreferredSize(new java.awt.Dimension(135, 550));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(listMenu1, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(96, Short.MAX_VALUE)
+                .addComponent(listMenu1, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private TheStreetLablel.swing.ListMenu<String> listMenu1;
     // End of variables declaration//GEN-END:variables
 }
