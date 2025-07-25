@@ -6,8 +6,8 @@ package TheStreetLablel.dao.impl;
 
 import TheStreetLablel.dao.CrudDAO;
 import TheStreetLablel.dao.SanPhamChiTietDAO;
-import TheStreetLablel.model.SanPhamChiTiet;
-import TheStreetLablel.model.SanPhamChiTietResponse;
+import TheStreetLablel.model.sanpham.SanPhamChiTiet;
+import TheStreetLablel.model.response.SanPhamChiTietResponse;
 import TheStreetLablel.util.XJdbc;
 import TheStreetLablel.util.XQuery;
 import java.util.List;

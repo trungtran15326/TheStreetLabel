@@ -6,6 +6,7 @@ package TheStreetLablel.ui;
 
 import TheStreetLablel.event.EventMenuSelected;
 import TheStreetLablel.model.Model_Menu1;
+import TheStreetLablel.util.XDialog;
 import java.awt.Color;
 import javax.swing.DefaultListModel;
 import javax.swing.JComponent;
@@ -22,7 +23,7 @@ public class Main extends javax.swing.JFrame {
     private NhanVien nhanVien;
     private TaiKhoan taiKhoan;
     private ThongKe thongKe;
-    
+    private QuanLyGiamGia giamGia;
     public Main() {
         initComponents();
         home = new Home();
@@ -32,6 +33,7 @@ public class Main extends javax.swing.JFrame {
         nhanVien = new NhanVien();
         taiKhoan = new TaiKhoan();
         thongKe = new ThongKe();
+        giamGia = new QuanLyGiamGia();
         init();
         setForm(new Home());
     }
@@ -63,6 +65,16 @@ public class Main extends javax.swing.JFrame {
                 }
                 else if(index == 6){
                     setForm(thongKe);
+                }
+                else if(index == 7){
+                    setForm(giamGia);
+                }
+                else if (index == 8) {       
+                    
+                    if (XDialog.confirm("Thong bao", "Co chac muon thoat khong")) {
+                        System.exit(0);
+                    }
+                    
                 }
             }
         });

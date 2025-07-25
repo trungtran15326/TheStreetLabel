@@ -2,20 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package TheStreetLablel.model;
+package TheStreetLablel.model.sanpham;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- *
- * @author Admin
- */
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class ThuongHieu {
-     private String MaThuongHieu;
-     private String TenThuongHieu;
+@NoArgsConstructor
+public class KieuDang {
+      private String MaKieuDang;
+      private String KieuDang;
 }

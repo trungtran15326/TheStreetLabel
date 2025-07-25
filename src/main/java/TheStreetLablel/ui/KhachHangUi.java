@@ -8,7 +8,7 @@ package TheStreetLablel.ui;
 import TheStreetLablel.controller.KhachHangController;
 import TheStreetLablel.dao.KhachHangDAO;
 import TheStreetLablel.dao.impl.KhachHangDAOImpl;
-import TheStreetLablel.model.khachHang;
+import TheStreetLablel.model.khachhang.khachHang;
 import TheStreetLablel.util.XDialog;
 import javax.swing.table.DefaultTableModel;
 import java.util.List;

@@ -7,7 +7,7 @@ package TheStreetLablel.dao.impl;
 
 
 import TheStreetLablel.dao.KhachHangDAO;
-import TheStreetLablel.model.khachHang;
+import TheStreetLablel.model.khachhang.khachHang;
 import TheStreetLablel.util.XJdbc;
 import TheStreetLablel.util.XQuery;
 

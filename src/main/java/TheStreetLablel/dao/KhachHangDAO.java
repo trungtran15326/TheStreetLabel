@@ -5,7 +5,7 @@
 package TheStreetLablel.dao;
 
 
-import TheStreetLablel.model.khachHang;
+import TheStreetLablel.model.khachhang.khachHang;
 import java.util.List;
 /**
  *

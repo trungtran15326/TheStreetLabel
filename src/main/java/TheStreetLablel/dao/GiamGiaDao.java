@@ -4,16 +4,13 @@
  */
 package TheStreetLablel.dao;
 
-import TheStreetLablel.model.sanpham.SanPham;
-import TheStreetLablel.model.response.SanPhamChiTietResponse;
+import TheStreetLablel.model.giamgia.GiamGia;
 import java.util.List;
-
-
 
 /**
  *
- * @author Admin
+ * @author DLC
  */
-public interface SanPhamDAO extends CrudDAO<SanPham, String>{
-  
+public interface GiamGiaDao extends CrudDAO<GiamGia, String>{
+    List<GiamGia> findAll();
 }

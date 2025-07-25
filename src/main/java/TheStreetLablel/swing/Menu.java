@@ -47,8 +47,8 @@ public class Menu extends javax.swing.JPanel {
         listMenu1.addItem(new Model_Menu1("Quản lý nhân viên", Model_Menu1.MenuType.MENU));
         listMenu1.addItem(new Model_Menu1("Quản lý tài khoản", Model_Menu1.MenuType.MENU));
         listMenu1.addItem(new Model_Menu1("Thống kê", Model_Menu1.MenuType.MENU));
-
-
+        listMenu1.addItem(new Model_Menu1("Quản lý giảm giá", Model_Menu1.MenuType.MENU));
+        listMenu1.addItem(new Model_Menu1("Thoát", Model_Menu1.MenuType.MENU));
         
     }
 
@@ -96,8 +96,8 @@ public class Menu extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(96, Short.MAX_VALUE)
-                .addComponent(listMenu1, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(82, Short.MAX_VALUE)
+                .addComponent(listMenu1, javax.swing.GroupLayout.PREFERRED_SIZE, 562, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents

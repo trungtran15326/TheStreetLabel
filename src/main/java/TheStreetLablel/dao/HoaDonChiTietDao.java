@@ -4,16 +4,13 @@
  */
 package TheStreetLablel.dao;
 
-import TheStreetLablel.model.sanpham.SanPham;
-import TheStreetLablel.model.response.SanPhamChiTietResponse;
+import TheStreetLablel.model.hoadon.HoaDonChiTiet;
 import java.util.List;
-
-
 
 /**
  *
  * @author Admin
  */
-public interface SanPhamDAO extends CrudDAO<SanPham, String>{
-  
+public interface HoaDonChiTietDao extends CrudDAO<HoaDonChiTiet, String>{
+                List<HoaDonChiTiet> findAllById(String MaHoaDon);
 }

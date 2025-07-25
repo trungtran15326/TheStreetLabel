@@ -4,7 +4,7 @@
  */
 package TheStreetLablel.dao;
 
-import TheStreetLablel.model.DeGiay;
+import TheStreetLablel.model.sanpham.DeGiay;
 import TheStreetLablel.util.XQuery;
 import java.util.List;
 

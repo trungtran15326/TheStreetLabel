@@ -4,8 +4,8 @@
  */
 package TheStreetLablel.dao;
 
-import TheStreetLablel.model.SanPhamChiTiet;
-import TheStreetLablel.model.SanPhamChiTietResponse;
+import TheStreetLablel.model.sanpham.SanPhamChiTiet;
+import TheStreetLablel.model.response.SanPhamChiTietResponse;
 import java.util.List;
 
 /**

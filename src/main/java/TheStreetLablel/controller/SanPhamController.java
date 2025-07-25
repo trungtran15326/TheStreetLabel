@@ -4,10 +4,10 @@
  */
 package TheStreetLablel.controller;
 
-import TheStreetLablel.model.SanPham;
-import TheStreetLablel.model.SanPhamChiTiet;
-import TheStreetLablel.model.SanPhamChiTietResponse;
-import TheStreetLablel.model.SanPhamResponse;
+import TheStreetLablel.model.sanpham.SanPham;
+import TheStreetLablel.model.sanpham.SanPhamChiTiet;
+import TheStreetLablel.model.response.SanPhamChiTietResponse;
+import TheStreetLablel.model.response.SanPhamResponse;
 
 /**
  *

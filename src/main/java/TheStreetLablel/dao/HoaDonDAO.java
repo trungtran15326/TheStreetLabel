@@ -2,17 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package TheStreetLablel.controller;
+package TheStreetLablel.dao;
 
-
-import TheStreetLablel.model.khachhang.khachHang;
-
+import TheStreetLablel.model.hoadon.HoaDon;
 
 /**
  *
  * @author Admin
  */
-public interface KhachHangController extends CrudController<khachHang>{
-    void setForm(khachHang entity);
-    khachHang getForm();
+public interface HoaDonDAO extends CrudDAO<HoaDon,String>{
+    
 }

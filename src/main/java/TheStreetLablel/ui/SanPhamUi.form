@@ -278,8 +278,8 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Bi&#x1ec3;u m&#x1eab;u 1">
-                <Property name="tabTitle" type="java.lang.String" value="Bi&#x1ec3;u m&#x1eab;u 1"/>
+              <JTabbedPaneConstraints tabName="S&#x1ea3;n ph&#x1ea9;m">
+                <Property name="tabTitle" type="java.lang.String" value="S&#x1ea3;n ph&#x1ea9;m"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -433,7 +433,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel11">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Lo&#x1ea1;i &#x111;&#x1ebf; d&#xe0;y"/>
+                <Property name="text" type="java.lang.String" value="Lo&#x1ea1;i &#x111;&#x1ebf; gi&#xe0;y"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel12">
@@ -556,8 +556,8 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Bi&#x1ec3;u m&#x1eab;u 2">
-                <Property name="tabTitle" type="java.lang.String" value="Bi&#x1ec3;u m&#x1eab;u 2"/>
+              <JTabbedPaneConstraints tabName="S&#x1ea3;n ph&#x1ea9;m chi ti&#x1ebf;t">
+                <Property name="tabTitle" type="java.lang.String" value="S&#x1ea3;n ph&#x1ea9;m chi ti&#x1ebf;t"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>

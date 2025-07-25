@@ -12,16 +12,16 @@ import TheStreetLablel.dao.ThuongHieuDAO;
 import TheStreetLablel.dao.XuatSuDAO;
 import TheStreetLablel.dao.impl.SanPhamChiTietImpl;
 import TheStreetLablel.dao.impl.SanPhamDAOImpl;
-import TheStreetLablel.model.DeGiay;
-import TheStreetLablel.model.KieuDang;
-import TheStreetLablel.model.MauSac;
-import TheStreetLablel.model.SanPham;
-import TheStreetLablel.model.SanPhamChiTiet;
-import TheStreetLablel.model.SanPhamChiTietResponse;
-import TheStreetLablel.model.SanPhamResponse;
-import TheStreetLablel.model.Size;
-import TheStreetLablel.model.ThuongHieu;
-import TheStreetLablel.model.XuatSu;
+import TheStreetLablel.model.sanpham.DeGiay;
+import TheStreetLablel.model.sanpham.KieuDang;
+import TheStreetLablel.model.sanpham.MauSac;
+import TheStreetLablel.model.sanpham.SanPham;
+import TheStreetLablel.model.sanpham.SanPhamChiTiet;
+import TheStreetLablel.model.response.SanPhamChiTietResponse;
+import TheStreetLablel.model.response.SanPhamResponse;
+import TheStreetLablel.model.sanpham.Size;
+import TheStreetLablel.model.sanpham.ThuongHieu;
+import TheStreetLablel.model.sanpham.XuatSu;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -232,7 +232,7 @@ public class SanPhamUi extends javax.swing.JPanel implements SanPhamController{
 
         jLabel10.setText("Kiểu dáng");
 
-        jLabel11.setText("Loại đế dày");
+        jLabel11.setText("Loại đế giày");
 
         jLabel12.setText("Xuất sứ");
 
@@ -356,7 +356,7 @@ public class SanPhamUi extends javax.swing.JPanel implements SanPhamController{
                 .addContainerGap(214, Short.MAX_VALUE))
         );
 
-        tabs.addTab("Biểu mẫu 1", jPanel3);
+        tabs.addTab("Sản phẩm", jPanel3);
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -488,7 +488,7 @@ public class SanPhamUi extends javax.swing.JPanel implements SanPhamController{
                 .addContainerGap(257, Short.MAX_VALUE))
         );
 
-        tabs.addTab("Biểu mẫu 2", jPanel4);
+        tabs.addTab("Sản phẩm chi tiết", jPanel4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

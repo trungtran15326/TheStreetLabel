@@ -4,7 +4,7 @@
  */
 package TheStreetLablel.dao;
 
-import TheStreetLablel.model.KieuDang;
+import TheStreetLablel.model.sanpham.KieuDang;
 import TheStreetLablel.util.XQuery;
 import java.util.List;
 

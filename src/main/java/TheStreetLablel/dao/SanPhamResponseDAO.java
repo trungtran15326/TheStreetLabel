@@ -4,7 +4,7 @@
  */
 package TheStreetLablel.dao;
 
-import TheStreetLablel.model.SanPhamResponse;
+import TheStreetLablel.model.response.SanPhamResponse;
 import TheStreetLablel.util.XQuery;
 import java.util.List;
 

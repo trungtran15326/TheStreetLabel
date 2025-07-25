@@ -5,6 +5,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -88,22 +89,30 @@ public class XQuery {
      * @return kết quả truy vấn
      * @throws RuntimeException lỗi truy vấn
      */
-    private static <B> B readBean(ResultSet resultSet, Class<B> beanClass) throws Exception {
-        B bean = beanClass.getDeclaredConstructor().newInstance();
-        Method[] methods = beanClass.getDeclaredMethods();
-        for(Method method: methods){
-            String name = method.getName();
-            if (name.startsWith("set") && method.getParameterCount() == 1) {
-                try {
-                    Object value = resultSet.getObject(name.substring(3));
-                    method.invoke(bean, value);
-                } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException | SQLException e) {
-                    System.out.printf("+ Column '%s' not found!\r\n", name.substring(3));
-                }
+private static <B> B readBean(ResultSet resultSet, Class<B> beanClass) throws Exception {
+    B bean = beanClass.getDeclaredConstructor().newInstance();
+    Field[] fields = beanClass.getDeclaredFields();
+
+    for (Field field : fields) {
+        field.setAccessible(true); // cần thiết để gán giá trị
+        String columnLabel = field.getName(); // đúng với alias SQL dạng camelCase
+
+        try {
+            Object value = resultSet.getObject(columnLabel);
+
+            // Nếu field là LocalDate và value là Date, chuyển đổi
+            if (field.getType().equals(LocalDate.class) && value instanceof java.sql.Date) {
+                value = ((java.sql.Date) value).toLocalDate();
             }
+
+            field.set(bean, value);
+        } catch (SQLException e) {
+            System.out.printf("⚠ Column '%s' not found in result set.\n", columnLabel);
         }
-        return bean;
     }
+
+    return bean;
+}
     
     public static void main(String[] args) {
 //        demo1();

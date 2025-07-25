@@ -4,7 +4,7 @@
  */
 package TheStreetLablel.dao;
 
-import TheStreetLablel.model.Size;
+import TheStreetLablel.model.sanpham.Size;
 import TheStreetLablel.util.XQuery;
 import java.util.List;
 

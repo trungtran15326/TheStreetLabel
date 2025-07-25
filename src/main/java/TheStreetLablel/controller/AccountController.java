@@ -4,15 +4,14 @@
  */
 package TheStreetLablel.controller;
 
+import TheStreetLablel.model.taikhoan.Model_Account;
 
-import TheStreetLablel.model.khachhang.khachHang;
 
 
 /**
  *
- * @author Admin
+ * @author Huu
  */
-public interface KhachHangController extends CrudController<khachHang>{
-    void setForm(khachHang entity);
-    khachHang getForm();
+public interface AccountController extends CrudController<Model_Account> {
+   Model_Account getForm(); // Tạo thực thể từ dữ liệu form
 }

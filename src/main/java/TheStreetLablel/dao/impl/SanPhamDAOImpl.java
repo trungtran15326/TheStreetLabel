@@ -5,9 +5,9 @@
 package TheStreetLablel.dao.impl;
 
 import TheStreetLablel.dao.SanPhamDAO;
-import TheStreetLablel.model.SanPham;
-import TheStreetLablel.model.SanPhamChiTietResponse;
-import TheStreetLablel.model.SanPhamResponse;
+import TheStreetLablel.model.sanpham.SanPham;
+import TheStreetLablel.model.response.SanPhamChiTietResponse;
+import TheStreetLablel.model.response.SanPhamResponse;
 import TheStreetLablel.util.XJdbc;
 import TheStreetLablel.util.XQuery;
 
@@ -79,21 +79,7 @@ public class SanPhamDAOImpl implements SanPhamDAO{
                       WHERE  [MaSanPham] = ?
                       """;
     
-    String findAllSPCT = """
-                         
-SELECT 
-                               SPCT.MaSanPhamCT
 
-                               ,SPCT.MaSanPham
-                                                        ,SPCT.SoLuong
-                               ,MS.MauSac
-                               ,Z.Size
-                         	  ,SPCT.TrangThai
-                           FROM [The_Street_Label].[dbo].[SANPHAMCHITIET] SPCT
-                          LEFT JOIN MAUSAC MS ON MS.MaMauSac= SPCT.MaMauSac
-                           LEFT JOIN SIZE Z ON Z.MaSize = SPCT.MaSize
-                         WHERE SPCT.MaSanPham = ?
-                         """;
     
     @Override
     public SanPham create(SanPham entity) {
